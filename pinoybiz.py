@@ -185,7 +185,6 @@ def updateOrder(order_id, order_quantity):
                    ''',(order_quantity, order_id,))
     orderDetails = cursor.fetchall()
 
-
     if list(orderDetails[0])[0] > 10000:
         conn.execute('ROLLBACK')
     else:
